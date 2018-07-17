@@ -15,7 +15,7 @@ by adding `apimo` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:apimo, "~> 0.1.0"}
+    {:apimo, "~> 0.1"}
   ]
 end
 ```

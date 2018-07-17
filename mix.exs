@@ -8,6 +8,7 @@ defmodule Apimo.MixProject do
       app: :apimo,
       version: @version,
       elixir: "~> 1.6",
+      description: "Apimo client for Elixir",
       start_permanent: Mix.env() == :prod,
       package: package(),
       docs: docs(),
