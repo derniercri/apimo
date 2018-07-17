@@ -3,6 +3,7 @@ defmodule ApimoTest do
   doctest Apimo
 
   test "greets the world" do
-    assert Apimo.fetch_agencies() != nil
+    {:ok, res} = Apimo.fetch_agencies()
+    assert res.body != nil
   end
 end
