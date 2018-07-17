@@ -16,7 +16,7 @@ defmodule Apimo do
 
   def fetch_agencies() do
     case HTTPoison.get("#{@endpoint}/agencies", [], options()) do
-      {:ok, res} -> res.body
+      {:ok, res} -> res.body |> Poison.decode(keys: :atoms)
     end
   end
 end
