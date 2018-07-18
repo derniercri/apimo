@@ -6,15 +6,15 @@ defmodule Apimo do
   @endpoint "https://api.apimo.pro"
 
   def process_request_options(options) do
-    options ++
-      [
-        hackney: [
-          basic_auth: {
-            Application.get_env(:apimo, :provider, System.get_env("APIMO_PROVIDER")),
-            Application.get_env(:apimo, :token, System.get_env("APIMO_TOKEN"))
-          }
-        ]
+    [
+      hackney: [
+        basic_auth: {
+          Application.get_env(:apimo, :provider, System.get_env("APIMO_PROVIDER")),
+          Application.get_env(:apimo, :token, System.get_env("APIMO_TOKEN"))
+        }
       ]
+    ]
+    |> Keyword.merge(options)
   end
 
   def process_url(url), do: @endpoint <> url
