@@ -19,7 +19,7 @@ defmodule Apimo do
 
   def process_url(url), do: @endpoint <> url
 
-  def process_response_body(body), do: body |> Poison.decode!(keys: :atoms)
+  def process_response_body(body), do: body |> Poison.decode!()
 
   def fetch_agencies(), do: get("/agencies")
 
