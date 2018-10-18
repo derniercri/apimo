@@ -14,7 +14,9 @@ defmodule Apimo.MixProject do
       docs: docs(),
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      name: "Apimo",
+      source_url: "https://github.com/derniercri/apimo"
     ]
   end
 
@@ -44,6 +46,7 @@ defmodule Apimo.MixProject do
   defp package do
     # These are the default files included in the package
     [
+      name: "apimo",
       files: ["lib", "mix.exs", "README.md"],
       maintainers: ["Guillaume Bailleul<laibulle@gmail.com>"],
       licenses: ["MIT"],
