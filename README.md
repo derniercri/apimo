@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-export APIMO_TOKEN=your token 
+export APIMO_TOKEN=your token
 export APIMO_PROVIDER=your id
 ```
 
@@ -15,7 +15,7 @@ by adding `apimo` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:apimo, "~> 0.1"}
+    {:apimo, "~> 0.3"}
   ]
 end
 ```
