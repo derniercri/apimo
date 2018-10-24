@@ -15,9 +15,21 @@ defmodule Apimo do
     |> Keyword.merge(options)
   end
 
+  def process_request_params(params) do
+    case Application.get_env(:apimo, :culture) do
+      nil ->
+        params
+
+      culture ->
+        params
+        |> Enum.into(%{})
+        |> Map.put(:culture, culture)
+    end
+  end
+
   def process_url(url), do: @endpoint <> url
 
-  def process_response_body(body), do: body |> Poison.decode!()
+  def process_response_body(body), do: Poison.decode!(body)
 
   @deprecated "Use Apimo.Agency.list/0 instead"
   def fetch_agencies(), do: get("/agencies")
