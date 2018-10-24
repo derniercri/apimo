@@ -1,7 +1,7 @@
 defmodule Apimo.MixProject do
   use Mix.Project
 
-  @version "0.3.0"
+  @version "0.4.1"
 
   def project do
     [
@@ -31,7 +31,7 @@ defmodule Apimo.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.19", only: :dev},
-      {:httpoison, "~> 1.2"},
+      {:httpoison, "~> 1.4"},
       {:poison, "~> 3.1"}
     ]
   end
