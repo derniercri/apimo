@@ -53,6 +53,8 @@ defmodule Apimo.Catalog do
 
   def property_reglementation, do: get("/catalogs/property_reglementation")
 
+  def property_regulation, do: get("/catalogs/property_regulation")
+
   def property_financial, do: get("/catalogs/property_financial")
 
   def property_service, do: get("/catalogs/property_service")
