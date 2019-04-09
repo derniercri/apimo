@@ -1,13 +1,13 @@
 defmodule Apimo.MixProject do
   use Mix.Project
 
-  @version "0.4.2"
+  @version "0.5.0"
 
   def project do
     [
       app: :apimo,
       version: @version,
-      elixir: "~> 1.6",
+      elixir: "~> 1.7",
       description: "Apimo client for Elixir",
       start_permanent: Mix.env() == :prod,
       package: package(),

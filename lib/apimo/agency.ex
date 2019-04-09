@@ -1,9 +1,11 @@
 defmodule Apimo.Agency do
-  import Apimo, only: [get: 1]
+  import Apimo, only: [get: 1, get: 3]
 
   def list, do: get("/agencies")
 
-  def properties(agency_id), do: get("/agencies/#{agency_id}/properties")
+  def properties(agency_id, params \\ %{}) do
+    get("/agencies/#{agency_id}/properties", [], [params: params])
+  end
 
   def contacts(agency_id), do: get("/agencies/#{agency_id}/contacts")
 
